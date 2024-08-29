@@ -79,8 +79,11 @@ def main():
     fields = cursor.column_names
 
     for row in cursor:
-        message = "".join("{}={}; ".format(k, v) for k, v in zip(fields, row))
-        logger.info(message.strip())
+        message = (f"name={row[0]}; email={row[1]}; phone={row[2]}; "
+                   f"ssn={row[3]}; password={row[4]}; ip={row[5]}; "
+                   f"last_login={row[6]}; user_agent={row[7]};")
+        logger.info(message)
+
     cursor.close()
     db.close()
 
