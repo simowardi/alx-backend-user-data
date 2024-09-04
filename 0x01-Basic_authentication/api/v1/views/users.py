@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Users view module."""
+"""
+Users view module.
+"""
 from api.v1.views import app_views
 from flask import abort, jsonify, request
 from models.user import User
