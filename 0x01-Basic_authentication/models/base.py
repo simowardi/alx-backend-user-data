@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """ Base module
 """
-import json
-import uuid
-from os import path
 from datetime import datetime
 from typing import TypeVar, List, Iterable
+from os import path
+import json
+import uuid
 
 
 TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%S"
@@ -13,8 +13,7 @@ DATA = {}
 
 
 class Base():
-    """ 
-    Base class
+    """ Base class
     """
 
     def __init__(self, *args: list, **kwargs: dict):
